@@ -1,0 +1,17 @@
+{
+  "name": "boss-web",
+  "version": "0.0.1",
+  "description": "the webpage of where's the boss",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build ./src/tailwind.css -o ./dist/tailwind.css",
+    "release": "set NODE_ENV=production && tailwindcss build ./src/tailwind.css -o ./dist/tailwind.css"
+  },
+  "author": "dan",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.14",
+    "tailwindcss": "^2.1.2"
+  }
+}
