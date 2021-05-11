@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tailwindcss build ./src/tailwind.css -o ./dist/tailwind.css",
-    "release": "set NODE_ENV=production && tailwindcss build ./src/tailwind.css -o ./dist/tailwind.css"
+    "release": "NODE_ENV=production tailwindcss build ./src/tailwind.css -o ./dist/tailwind.css"
   },
   "author": "dan",
   "license": "MIT",

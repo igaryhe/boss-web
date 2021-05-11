@@ -1,57 +1,149 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="./tailwind.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./tailwind.css" rel="stylesheet">
 </head>
+
 <body class="bg-black text-white">
-    <div class="container mx-auto px-16 py-16 max-w-screen-lg leading-relaxed">
+    <div class="container mx-auto px-8 py-16 max-w-screen-lg leading-relaxed">
         <header class="text-center">
             <h1 class="text-center text-4xl md:text-6xl font-bold pt-40">Where's the Boss</h1>
             <p class="pt-8">A game about betrayal.</p>
             <div class="pt-8 flex flex-col items-center md:flex-row md:justify-center">
-                <button class="w-40 md:w-48 h-10 md:h-12 border-2 border-white md:text-xl rounded-full mx-4 my-2"><a href="https://discord.com/api/oauth2/authorize?client_id=835399414121234432&permissions=0&scope=bot%20applications.commands">Add to Discord</a></button>
-                <button class="w-40 md:w-48 h-10 md:h-12 border-2 border-white md:text-xl rounded-full mx-4 my-2"><a href="#how-to-play">Rulebook</a></button>
+                <a
+                    href="https://discord.com/api/oauth2/authorize?client_id=835399414121234432&permissions=0&scope=bot%20applications.commands"><button
+                    class="w-40 md:w-48 h-10 md:h-12 border-2 border-white md:text-xl rounded-full mx-4 my-2">Add to
+                    Discord</button></a>
+                <a href="#how-to-play"><button
+                        class="w-40 md:w-48 h-10 md:h-12 border-2 border-white md:text-xl rounded-full mx-4 my-2">Rulebook</button></a>
             </div>
         </header>
         <div class="pt-32 ">
             <h1 class="text-center text-2xl md:text-4xl font-bold">What is Where's the Boss?</h1>
             <p class="pt-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet risus feugiat in ante. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Penatibus et magnis dis parturient montes nascetur ridiculus mus. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Consectetur libero id faucibus nisl tincidunt. Donec ultrices tincidunt arcu non. Cursus metus aliquam eleifend mi in. Tincidunt ornare massa eget egestas purus viverra accumsan in.
+                Where’s the Boss is a 5-player hidden role game played on Discord. It's a game about the hide and seek
+                between a Mafia gang and the Police. Within 3 rounds, the Police needs to capture the Mafia Boss with
+                the help of the Traitor.
             </p>
         </div>
         <div class="pt-32">
             <h1 class="text-center text-2xl md:text-4xl font-bold">How to Setup?</h1>
-            <p class="pt-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus turpis in eu mi. Consequat ac felis donec et. Tristique senectus et netus et malesuada fames ac turpis egestas. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Vel quam elementum pulvinar etiam non quam lacus. Sit amet venenatis urna cursus eget nunc scelerisque. Eget nullam non nisi est. Etiam tempor orci eu lobortis elementum. Quis vel eros donec ac. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Etiam erat velit scelerisque in dictum non consectetur a erat. 
-            </p>
-            <ul class="list-disc list-inside">
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-            </ul>
+            <h2 class="text-center text-xl font-bold pt-8">Make sure you have these things on your Discord server</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8 pt-8">
+                <div>
+                    <img src="./img/discord.svg" alt="Discord" class="h-12 md:h-16 mx-auto" />
+                    <p class="text-center">Where's the Boss Discord Bot</p>
+                </div>
+                <div>
+                    <img src="./img/hash.svg" alt="Text Channel" class="h-12 md:h-16 mx-auto" />
+                    <p class="text-center">A Text Channel</p>
+                </div>
+                <div>
+                    <img src="./img/volume-2.svg" alt="Game Room" class="h-12 md:h-16 mx-auto" />
+                    <p class="text-center">A Voice Channel</p>
+                </div>
+                <div>
+                    <img src="./img/volume-2.svg" alt="Boss' Hideout" class="h-12 md:h-16 mx-auto" />
+                    <p class="text-center">Another Voice Channel</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row pt-8">
+                <ul class="flex-1 list-disc px-4">
+                    <li>One voice channel is referred to as the "Game Room".</li>
+                    <li>The other one is referred to as the "Boss' Hideout".</li>
+                    <li>Admin could turn off the notification of the text channel.</li>
+                </ul>
+                <ul class="flex-1 list-disc px-4">
+                    <li>Everyone joins the "Game Room".</li>
+                    <li>The player who recently been to airport types <span class="font-mono">/start</span> in the text
+                        channel to start the game.</li>
+                    <li>Players join the game by typing <span class="font-mono">/join</span> in the text channel.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-32">
+            <h1 class="text-center text-2xl md:text-4xl font-bold">Roles</h1>
+            <h2 class="text-center text-2xl font-bold pt-8">The Mafia Faction</h2>
+            <div class="flex flex-col md:flex-row pt-8">
+                <div class="flex-1 px-4 py-2">
+                    <div class="flex justify-between">
+                        <h3 class="text-2xl font-bold">Mafia Boss</h3>
+                        <h3 class="text-2xl">1 Player</h3>
+                    </div>
+                    <p>
+                        You are the Mafia Boss, you need to meet with your Mafia Members in the following three rounds.
+                        You need to decide carefully where your members should go, and try to decipher who is the
+                        traitor in your gang.
+                    </p>
+                </div>
+                <div class="flex-1 px-4 py-2">
+                    <div class="flex justify-between">
+                        <h3 class="text-2xl font-bold">Mafia Members</h3>
+                        <h3 class="text-2xl">2 Players</h3>
+                    </div>
+                    <p>
+                        You are the Mafia Member working for the Boss, you need to meet with the Boss in the following
+                        three rounds. In order to avoid the police meeting with the Boss in the same location, you can
+                        try to deceive the Police by pretending to be a traitor and gaining their trust to mislead them.
+                    </p>
+                </div>
+            </div>
+            <h2 class="text-center text-2xl font-bold pt-8">The Police Faction</h2>
+            <div class="flex flex-col md:flex-row pt-8">
+                <div class="flex-1 px-4 py-2">
+                    <div class="flex justify-between">
+                        <h3 class="text-2xl font-bold">Police</h3>
+                        <h3 class="text-2xl">1 Player</h3>
+                    </div>
+                    <p>
+                        You are the Police, working to catch the Boss in 3 rounds by meeting with the Boss in the same
+                        location. You need to decipher who is the traitor and work closely with them.
+                    </p>
+                </div>
+                <div class="flex-1 px-4 py-2">
+                    <div class="flex justify-between">
+                        <h3 class="text-2xl font-bold">Traitor</h3>
+                        <h3 class="text-2xl">1 Player</h3>
+                    </div>
+                    <p>
+                        You are the Traitor of the Mafia gang, the Boss has mistreated you for a long time. Thus, you
+                        want to betray the Boss by secretly giving out information to the Police to help them catch the
+                        Boss, and at the same time, pretend to be a Mafia Member.
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="pt-32">
             <h1 class="text-center text-2xl md:text-4xl font-bold" id="how-to-play">How to Play?</h1>
             <div class="flex flex-col md:flex-row pt-8">
                 <div class="flex-1 pr-4 py-2">
                     <h1 class="text-2xl text-center font-bold">Scheme Phase</h1>
-                    <p class="pt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus turpis in eu mi. Consequat ac felis donec et. Tristique senectus et netus et malesuada fames ac turpis egestas. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Vel quam elementum pulvinar etiam non quam lacus. Sit amet venenatis urna cursus eget nunc scelerisque. Eget nullam non nisi est. Etiam tempor orci eu lobortis elementum. Quis vel eros donec ac. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Etiam erat velit scelerisque in dictum non consectetur a erat. 
-                    </p>
+                    <ul class="flex-1 list-disc">
+                        <li>The Boss enters the Boss' Hideout with a Mafia Member to discuss their location for the
+                            round.</li>
+                        <li>There are 5 locations: <span class="font-bold">airport, bar, casino, hotel and villa</span>.
+                        </li>
+                        <li>When the time ends, the Boss sends off the Mafia Member and calls another one to the Boss'
+                            Hideout.</li>
+                        <li>Repeat until the Boss has met with all three Mafia Members.</li>
+                        <li>Everyone in the Game Room can chat with anyone publicly or privately during this phase.</li>
+                    </ul>
                 </div>
                 <div class="flex-1 pl-4 py-2">
                     <h1 class="text-2xl text-center font-bold">Meeting Phase</h1>
-                    <p class="pt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus turpis in eu mi. Consequat ac felis donec et. Tristique senectus et netus et malesuada fames ac turpis egestas. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Vel quam elementum pulvinar etiam non quam lacus. Sit amet venenatis urna cursus eget nunc scelerisque. Eget nullam non nisi est. Etiam tempor orci eu lobortis elementum. Quis vel eros donec ac. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Etiam erat velit scelerisque in dictum non consectetur a erat. 
-                    </p>
+                    <ul class="flex-1 list-disc">
+                        <li>Everyone decides where to go in 60 seconds.</li>
+                        <li>The Boss is not allowed to chat with anyone during this phase.</li>
+                        <li>All players set their locations using the <span class="font-mono">/goto</span> command
+                            before revealing the result.</li>
+                        <li>After all players finished choosing their location, the Boss uses the <span
+                                class="font-mono">/reveal</span> command to reveal all players' locations.</li>
+                        <li>Start a new round if no win condition have been met.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -75,45 +167,80 @@
                 </div>
             </div>
         </div>
-        <div class="md:px-16 pt-32 font-mono">
+        <div class="md:px-16 pt-32">
             <h1 class="text-center text-2xl md:text-4xl font-bold">Commands</h1>
-            <div class="pt-8">
-                <h2 class="text-2xl">/start</h2>
+            <div class="pt-8 font-mono">
+                <h2 class="font-bold md:font-normal md:text-2xl">/start</h2>
                 <p>Type the command in a text channel to start the game.</p>
             </div>
-            <div class="pt-8">
-                <h2 class="text-2xl">/stop</h2>
+            <div class="pt-8 font-mono">
+                <h2 class="font-bold md:font-normal md:text-2xl">/stop</h2>
                 <p>Type the command in the text channel to stop the game.</p>
             </div>
-            <div class="pt-8">
-                <h2 class="text-2xl">/restart</h2>
+            <div class="pt-8 font-mono">
+                <h2 class="font-bold md:font-normal md:text-2xl">/restart</h2>
                 <p>Type the command in the text channel to restart the game.</p>
             </div>
-            <div class="pt-8">
-                <h2 class="text-2xl">/join</h2>
+            <div class="pt-8 font-mono">
+                <h2 class="font-bold md:font-normal md:text-2xl">/join</h2>
                 <p>Players could type this command in the text channel to join the game. </p>
             </div>
-            <div class="pt-8">
-                <h2 class="text-2xl">/goto <span class="text-gray-500">[location]</span></h2>
+            <div class="pt-8 font-mono">
+                <h2 class="font-bold md:font-normal md:text-2xl">/goto <span class="text-gray-500">[location]</span>
+                </h2>
                 <p>This command is used to set the player's location.</p>
-                <p>[location] is one of the following values: airport, bar, casino, hotel, villa</p>
+                <p>[location] is one of the following values: <span class="font-bold">airport, bar, casino, hotel,
+                        villa</span></p>
             </div>
-            <div class="pt-8">
-                <h2 class="text-2xl">/barrier <span class="text-gray-500">[location]</span></h2>
+            <div class="pt-8 font-mono">
+                <h2 class="font-bold md:font-normal md:text-2xl">/barrier <span class="text-gray-500">[location]</span>
+                </h2>
                 <p>This command is for the Police to set their barrier.</p>
-                <p>[location] is one of the following values: airport, bar, casino, hotel, villa</p>
+                <p>[location] is one of the following values: <span class="font-bold">airport, bar, casino, hotel,
+                        villa</span></p>
             </div>
-            <div class="pt-8">
-                <h2 class="text-2xl">/reveal</h2>
+            <div class="pt-8 font-mono">
+                <h2 class="font-bold md:font-normal md:text-2xl">/reveal</h2>
                 <p>This command reveals everyone's location in one round.</p>
             </div>
-            <div class="pt-8">
-                <h2 class="text-2xl">/history</h2>
+            <div class="pt-8 font-mono">
+                <h2 class="font-bold md:font-normal md:text-2xl">/history</h2>
                 <p>This command logs all the game history.</p>
             </div>
         </div>
         <div class="pt-32">
             <h1 class="text-center text-2xl md:text-4xl font-bold">Tips</h1>
+            <div class="grid grid-cols-1 gap-x-16 gap-y-8 md:grid-cols-2 pt-8">
+                <div>
+                    <h3 class="text-xl font-bold text-center">Mafia Boss</h3>
+                    <ul class="list-disc">
+                        <li>You can give out false hints about your location if you don’t trust the Mafia Member.</li>
+                        <li>You can coordinate with real Mafia Members to give the Police a false location.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-center">Police</h3>
+                    <ul class="list-disc">
+                        <li>You need to identify who the real Traitor is.</li>
+                        <li>You could coordinate with the Traitor to deceive the Boss.</li>
+                        <li>You could pretend to trust a fake Traitor to exclude false locations.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-center">Mafia Member</h3>
+                    <ul class="list-disc">
+                        <li>You can earn the Police’s trust by disguising as the Traitor.</li>
+                        <li>You can privately chat with other Mafia Members to exchange information.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-center">Traitor</h3>
+                    <ul class="list-disc">
+                        <li>You need to disguise yourself as a Mafia Member when meeting with the Boss.</li>
+                        <li>You need to prove yourself that you are the real Traitor to the Police.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>
