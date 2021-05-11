@@ -18,7 +18,7 @@
                 <a
                     href="https://discord.com/api/oauth2/authorize?client_id=835399414121234432&permissions=0&scope=bot%20applications.commands">
                     <button class="w-40 md:w-48 h-10 md:h-12 border-2 border-white md:text-xl rounded-full mx-4 my-2">Add to Discord</button></a>
-                <a href="#how-to-play">
+                <a href="#roles">
                     <button class="w-40 md:w-48 h-10 md:h-12 border-2 border-white md:text-xl rounded-full mx-4 my-2">Rulebook</button>
                 </a>
             </div>
@@ -60,14 +60,14 @@
                 </ul>
                 <ul class="flex-1 list-disc px-4">
                     <li>Everyone joins the "Game Room".</li>
-                    <li>The player who recently been to airport types <span class="font-mono">/start</span> in the text
+                    <li>The player who recently been to airport types <a href="#start" class="font-mono">/start</a> in the text
                         channel to start the game.</li>
-                    <li>Players join the game by typing <span class="font-mono">/join</span> in the text channel.</li>
+                    <li>Players join the game by typing <a href="#join" class="font-mono">/join</a> in the text channel.</li>
                 </ul>
             </div>
         </div>
         <div class="pt-32">
-            <h1 class="text-center text-2xl md:text-4xl font-bold">Roles</h1>
+            <h1 class="text-center text-2xl md:text-4xl font-bold" id="roles">Roles</h1>
             <h2 class="text-center text-2xl font-bold pt-8">The Mafia Faction</h2>
             <div class="flex flex-col md:flex-row pt-8">
                 <div class="flex-1 px-4 py-2">
@@ -139,10 +139,12 @@
                     <ul class="flex-1 list-disc">
                         <li>Everyone decides where to go in 60 seconds.</li>
                         <li>The Boss is not allowed to chat with anyone during this phase.</li>
-                        <li>All players set their locations using the <span class="font-mono">/goto</span> command
+                        <li>All players set their locations using the <a href="#goto" class="font-mono">/goto</a> command
                             before revealing the result.</li>
-                        <li>After all players finished choosing their location, the Boss uses the <span
-                                class="font-mono">/reveal</span> command to reveal all players' locations.</li>
+                        <li>After all players finished setting their location, the Boss uses the <a
+                                href="#reveal" class="font-mono">/reveal</a> command to reveal all players' locations.</li>
+                        <li>During the whole game, the Police has the ability to place one <span class="font-bold">barrier</span> to a location using the <a href="#barrier" class="font-mono">/barrier</a> command.</li>
+                        <li>If the barrier is in the same place with the Boss when revealed, the Boss will not get any point in this round.</li>
                         <li>Start a new round if no win condition have been met.</li>
                     </ul>
                 </div>
@@ -171,41 +173,41 @@
         <div class="md:px-16 pt-32">
             <h1 class="text-center text-2xl md:text-4xl font-bold">Commands</h1>
             <div class="pt-8 font-mono">
-                <h2 class="font-bold md:font-normal md:text-2xl">/start</h2>
+                <h2 class="font-bold md:font-normal md:text-2xl" id="start">/start</h2>
                 <p>Type the command in a text channel to start the game.</p>
             </div>
             <div class="pt-8 font-mono">
-                <h2 class="font-bold md:font-normal md:text-2xl">/stop</h2>
+                <h2 class="font-bold md:font-normal md:text-2xl" id="stop">/stop</h2>
                 <p>Type the command in the text channel to stop the game.</p>
             </div>
             <div class="pt-8 font-mono">
-                <h2 class="font-bold md:font-normal md:text-2xl">/restart</h2>
+                <h2 class="font-bold md:font-normal md:text-2xl" id="restart">/restart</h2>
                 <p>Type the command in the text channel to restart the game.</p>
             </div>
             <div class="pt-8 font-mono">
-                <h2 class="font-bold md:font-normal md:text-2xl">/join</h2>
+                <h2 class="font-bold md:font-normal md:text-2xl" id="join">/join</h2>
                 <p>Players could type this command in the text channel to join the game. </p>
             </div>
             <div class="pt-8 font-mono">
-                <h2 class="font-bold md:font-normal md:text-2xl">/goto <span class="text-gray-500">[location]</span>
+                <h2 class="font-bold md:font-normal md:text-2xl" id="goto">/goto <span class="text-gray-500">[location]</span>
                 </h2>
                 <p>This command is used to set the player's location.</p>
                 <p>[location] is one of the following values: <span class="font-bold">airport, bar, casino, hotel,
                         villa</span></p>
             </div>
             <div class="pt-8 font-mono">
-                <h2 class="font-bold md:font-normal md:text-2xl">/barrier <span class="text-gray-500">[location]</span>
+                <h2 class="font-bold md:font-normal md:text-2xl" id="barrier">/barrier <span class="text-gray-500">[location]</span>
                 </h2>
                 <p>This command is for the Police to set their barrier.</p>
                 <p>[location] is one of the following values: <span class="font-bold">airport, bar, casino, hotel,
                         villa</span></p>
             </div>
             <div class="pt-8 font-mono">
-                <h2 class="font-bold md:font-normal md:text-2xl">/reveal</h2>
+                <h2 class="font-bold md:font-normal md:text-2xl" id="reveal">/reveal</h2>
                 <p>This command reveals everyone's location in one round.</p>
             </div>
             <div class="pt-8 font-mono">
-                <h2 class="font-bold md:font-normal md:text-2xl">/history</h2>
+                <h2 class="font-bold md:font-normal md:text-2xl" id="history">/history</h2>
                 <p>This command logs all the game history.</p>
             </div>
         </div>
@@ -217,6 +219,8 @@
                     <ul class="list-disc">
                         <li>You can give out false hints about your location if you don’t trust the Mafia Member.</li>
                         <li>You can coordinate with real Mafia Members to give the Police a false location.</li>
+                        <li>When you are assigned with the role, you'll receive a Google Sheets template from the bot.</li>
+                        <li>Use it to help you keep tracking of all the information.</li>
                     </ul>
                 </div>
                 <div>
